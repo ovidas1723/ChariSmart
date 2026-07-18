@@ -1,0 +1,26 @@
+digraph G {
+rankdir=LR;
+graph [bgcolor="white", splines=ortho, nodesep=1.0, ranksep=1.2];
+node [shape=box, style="rounded,filled", fillcolor="#eaf7ef", color="#176b55", fontname="Arial", fontsize=12, margin="0.15,0.1"];
+edge [fontname="Arial", fontsize=11];
+
+Donor [label="Donor\nRestaurant / Wedding Hall / Household"];
+Admin [label="Admin"];
+Recipient [label="Recipient\nNGO / Orphanage"];
+Volunteer [label="Volunteer / Rider"];
+System [label="ChariSmart System", fillcolor="#176b55", fontcolor="white", width=2.0, height=0.8];
+
+Donor -> System [label="Food details\nQuantity, expiry,\npickup window"];
+System -> Donor [label="Status notifications"];
+
+Recipient -> System [label="Food request\nCapacity, needed-before time"];
+System -> Recipient [label="Matched food info"];
+
+Admin -> System [label="Verification\nApproval, assignment"];
+
+System -> Volunteer [label="Assignment details"];
+Volunteer -> System [label="Pickup/delivery updates"];
+
+{rank=same; Donor; Recipient;}
+{rank=same; Admin; Volunteer;}
+}

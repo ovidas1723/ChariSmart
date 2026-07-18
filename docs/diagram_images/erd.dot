@@ -1,0 +1,7 @@
+digraph G{rankdir=LR; graph [bgcolor="white"]; node [shape=record, style="rounded,filled", fillcolor="#f8faf9", color="#176b55", fontname="Arial"];
+User[label="{USER|id PK\lname\lemail\lrole\larea\lorganization_type\lcapacity_meals\lverified}"];
+Donation[label="{DONATION|id PK\ldonor_id FK\lfood_name\ldonor_type\lquantity_meals\lpickup_window\lexpire_at\lstatus}"];
+Request[label="{FOOD_REQUEST|id PK\lrecipient_id FK\lbeneficiary_group\lquantity_needed\larea\lneeded_before\lstatus}"];
+Match[label="{FOOD_MATCH|id PK\ldonation_id FK\lrequest_id FK\lvolunteer_id FK\lmeals_allocated\lmatch_score\lstatus}"];
+Notification[label="{NOTIFICATION|id PK\lreceiver_email\ltitle\lmessage\lcreated_at}"];
+User->Donation[label="posts", arrowhead=crow]; User->Request[label="submits", arrowhead=crow]; Donation->Match[label="matched by", arrowhead=crow]; Request->Match[label="matched to", arrowhead=crow]; User->Match[label="assigned volunteer", arrowhead=crow]; User->Notification[label="receives", arrowhead=crow];}

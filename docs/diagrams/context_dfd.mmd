@@ -1,0 +1,8 @@
+flowchart LR
+  Donor[Donor: Restaurant / Wedding Hall / Household] -->|Food details + pickup window| System[ChariSmart System]
+  Recipient[NGO / Orphanage] -->|Food request + capacity| System
+  Admin[Admin] -->|Verification + approval + assignment| System
+  Volunteer[Volunteer / Rider] -->|Pickup and delivery updates| System
+  System -->|Notifications + status| Donor
+  System -->|Matched food + delivery info| Recipient
+  System -->|Assignment details| Volunteer

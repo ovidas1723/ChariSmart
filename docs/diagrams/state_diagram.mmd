@@ -1,0 +1,14 @@
+stateDiagram-v2
+  [*] --> Pending
+  Pending --> Approved: admin approves
+  Pending --> Rejected: admin rejects
+  Approved --> Matched: auto match
+  Matched --> Assigned: volunteer assigned
+  Assigned --> Picked_Up: pickup confirmed
+  Picked_Up --> Delivered: delivery confirmed
+  Approved --> Expired: expiry passed
+  Matched --> Expired: expiry passed
+  Assigned --> Expired: expiry passed
+  Delivered --> [*]
+  Rejected --> [*]
+  Expired --> [*]

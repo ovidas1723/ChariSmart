@@ -1,0 +1,5 @@
+digraph G{rankdir=TB; graph [bgcolor="white", splines=ortho]; node [shape=box, style="rounded,filled", fillcolor="#f8faf9", color="#176b55", fontname="Arial"];
+D[label="Donor"]; R[label="NGO/Orphanage"]; A[label="Admin"]; V[label="Volunteer"];
+P1[label="1.0 Manage Donation", fillcolor="#eaf7ef"]; P2[label="2.0 Manage Request", fillcolor="#eaf7ef"]; P3[label="3.0 Verify & Approve", fillcolor="#eaf7ef"]; P4[label="4.0 Match Food", fillcolor="#eaf7ef"]; P5[label="5.0 Delivery Tracking", fillcolor="#eaf7ef"];
+DS1[label="D1 Donations", shape=cylinder, fillcolor="#fff7ed"]; DS2[label="D2 Food Requests", shape=cylinder, fillcolor="#fff7ed"]; DS3[label="D3 Food Matches", shape=cylinder, fillcolor="#fff7ed"]; N[label="D4 Notifications", shape=cylinder, fillcolor="#fff7ed"];
+D->P1; R->P2; A->P3; V->P5; P1->DS1; P2->DS2; P3->DS1; P3->DS2; P3->P4; P4->DS3; DS1->P4; DS2->P4; P5->DS3; P5->N;}

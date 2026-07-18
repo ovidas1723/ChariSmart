@@ -1,0 +1,13 @@
+flowchart TB
+  D[Donor] --> P1[1.0 Manage Donation]
+  R[Recipient] --> P2[2.0 Manage Food Request]
+  A[Admin] --> P3[3.0 Verify and Approve]
+  P1 --> DS1[(Donations)]
+  P2 --> DS2[(Food Requests)]
+  P3 --> DS1
+  P3 --> DS2
+  P3 --> P4[4.0 Match Food]
+  P4 --> DS3[(Food Matches)]
+  V[Volunteer] --> P5[5.0 Pickup and Delivery Tracking]
+  P5 --> DS3
+  P5 --> N[Notifications]

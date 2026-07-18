@@ -1,0 +1,3 @@
+digraph G{rankdir=LR; graph [bgcolor="white"]; node [shape=box, style="rounded,filled", fillcolor="#f8faf9", color="#176b55", fontname="Arial"];
+Donor[label="Donor\nsubmits food"]; Recipient[label="Recipient\nsubmits request"]; Admin[label="Admin\napproves"]; Match[label="System\ncalculates match"]; Volunteer[label="Volunteer\npickup/delivery"]; Confirm[label="Recipient\nconfirms"]; Notify[label="System\nnotifies donor"];
+Donor->Admin[label="food details"]; Recipient->Admin[label="request details"]; Admin->Match[label="approve + auto-match"]; Match->Volunteer[label="assignment"]; Volunteer->Confirm[label="delivery"]; Confirm->Notify[label="rating/note"];}
