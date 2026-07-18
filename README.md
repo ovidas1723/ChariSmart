@@ -1,3 +1,4 @@
+## Project submitted for review
 # ChariSmart - Donation & Surplus Food Redistribution Network
 
 ChariSmart is a Flask + SQLite System Analysis & Design Lab prototype for surplus-food redistribution. It connects restaurants, wedding halls and household donors with NGOs/orphanages and volunteer riders.
